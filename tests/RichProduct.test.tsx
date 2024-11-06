@@ -2,8 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render } from "@testing-library/react";
 import RichProduct from "../src/RichProduct";
-import {RichProductProps} from "../src/types/product";
-
+import { RichProductProps } from "../src/types/product";
 
 interface TestCase {
   scenario: string;
@@ -13,11 +12,13 @@ interface TestCase {
 
 const testCases: TestCase[] = [
   {
-    scenario: "renders JSON-LD for 'Lord Marmalade IV's Exquisite Posh Picnic Basket'",
+    scenario:
+      "renders JSON-LD for 'Lord Marmalade IV's Exquisite Posh Picnic Basket'",
     props: {
       product: {
         name: "Lord Marmalade IV's Exquisite Posh Picnic Basket",
-        description: "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
+        description:
+          "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
         sku: "LORD-0001",
         brand: "Unnecessarily Luxurious Essentials",
         price: "4999.99",
@@ -26,13 +27,14 @@ const testCases: TestCase[] = [
         image: "https://example.com/luxury-picnic.jpg",
         availability: "OutOfStock",
         sellerName: "The Grandiose Goods Company",
-      }
+      },
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Lord Marmalade IV's Exquisite Posh Picnic Basket",
-      description: "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
+      description:
+        "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
       sku: "LORD-0001",
       brand: {
         "@type": "Brand",
@@ -55,11 +57,13 @@ const testCases: TestCase[] = [
     },
   },
   {
-    scenario: "renders JSON-LD for 'The Earl of Eccentricity's Umbrella for Indoor Use Only'",
+    scenario:
+      "renders JSON-LD for 'The Earl of Eccentricity's Umbrella for Indoor Use Only'",
     props: {
       product: {
         name: "The Earl of Eccentricity's Umbrella for Indoor Use Only",
-        description: "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
+        description:
+          "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
         sku: "ECCENTRIC-UMBRELLA",
         brand: "Truly Unnecessary Items",
         price: "299.99",
@@ -68,13 +72,14 @@ const testCases: TestCase[] = [
         image: "https://example.com/umbrella.jpg",
         availability: "InStock",
         sellerName: "Needless Necessities Ltd.",
-      }
+      },
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",
       name: "The Earl of Eccentricity's Umbrella for Indoor Use Only",
-      description: "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
+      description:
+        "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
       sku: "ECCENTRIC-UMBRELLA",
       brand: {
         "@type": "Brand",

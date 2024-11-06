@@ -4,7 +4,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import RichOrganization from "../src/RichOrganization";
-import {RichOrganizationProps} from "../src/types/organization";
+import { RichOrganizationProps } from "../src/types/organization";
 
 interface TestCase {
   scenario: string;
@@ -18,7 +18,8 @@ const testCases: TestCase[] = [
     props: {
       organization: {
         name: "Casa Bonita",
-        description: "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
+        description:
+          "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
         url: "https://casabonita.com",
         logo: "https://casabonita.com/logo.png",
         address: {
@@ -27,13 +28,14 @@ const testCases: TestCase[] = [
           postalCode: "80214",
         },
         email: "info@casabonita.com",
-      }
+      },
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Casa Bonita",
-      description: "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
+      description:
+        "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
       url: "https://casabonita.com",
       logo: "https://casabonita.com/logo.png",
       address: {
@@ -46,12 +48,14 @@ const testCases: TestCase[] = [
     },
   },
   {
-    scenario: "renders JSON-LD for Casa Bonita with alternate name and social media links",
+    scenario:
+      "renders JSON-LD for Casa Bonita with alternate name and social media links",
     props: {
       organization: {
         name: "Casa Bonita",
         alternateName: "The Greatest Place on Earth",
-        description: "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
+        description:
+          "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
         url: "https://casabonita.com",
         logo: "https://casabonita.com/logo.png",
         address: {
@@ -60,15 +64,19 @@ const testCases: TestCase[] = [
           postalCode: "80214",
         },
         email: "contact@casabonita.com",
-        sameAs: ["https://facebook.com/casabonita", "https://twitter.com/casabonita"],
-      }
+        sameAs: [
+          "https://facebook.com/casabonita",
+          "https://twitter.com/casabonita",
+        ],
+      },
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Casa Bonita",
       alternateName: "The Greatest Place on Earth",
-      description: "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
+      description:
+        "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
       url: "https://casabonita.com",
       logo: "https://casabonita.com/logo.png",
       address: {
@@ -78,7 +86,10 @@ const testCases: TestCase[] = [
         postalCode: "80214",
       },
       email: "contact@casabonita.com",
-      sameAs: ["https://facebook.com/casabonita", "https://twitter.com/casabonita"],
+      sameAs: [
+        "https://facebook.com/casabonita",
+        "https://twitter.com/casabonita",
+      ],
     },
   },
 ];

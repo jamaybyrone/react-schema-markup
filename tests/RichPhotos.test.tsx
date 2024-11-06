@@ -3,7 +3,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import RichPhotos from "../src/RichPhotos";
-import {RichPhotoProps} from "../src/types/photos";
+import { RichPhotoProps } from "../src/types/photos";
 
 interface TestCase {
   scenario: string;
@@ -20,7 +20,7 @@ const testCases: TestCase[] = [
         creditText: "Example Credit",
         copyrightNotice: "© Example 2023",
         creatorName: "Bo Jangles",
-      }
+      },
     },
     expectedJsonLd: {
       "@type": "ImageObject",
@@ -36,14 +36,14 @@ const testCases: TestCase[] = [
   {
     scenario: "renders with custom license and acquireLicensePage",
     props: {
-     photo: {
-       contentUrl: "https://example.com/photo2.jpg",
-       creditText: "Another Credit",
-       license: "https://example.com/custom-license",
-       acquireLicensePage: "https://example.com/license-page",
-       copyrightNotice: "© Another Example 2023",
-       creatorName: "Bo Jangles",
-     }
+      photo: {
+        contentUrl: "https://example.com/photo2.jpg",
+        creditText: "Another Credit",
+        license: "https://example.com/custom-license",
+        acquireLicensePage: "https://example.com/license-page",
+        copyrightNotice: "© Another Example 2023",
+        creatorName: "Bo Jangles",
+      },
     },
     expectedJsonLd: {
       "@type": "ImageObject",

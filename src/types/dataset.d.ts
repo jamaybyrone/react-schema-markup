@@ -11,5 +11,5 @@ export interface DataSetType {
 }
 
 export interface RichDatasetProps {
-  dataset: DataSetType
+  dataset: DataSetType;
 }
