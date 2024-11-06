@@ -1,5 +1,3 @@
-// src/components/RichProduct.tsx
-
 import { Product, Offer, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichProductProps } from "../types/product";

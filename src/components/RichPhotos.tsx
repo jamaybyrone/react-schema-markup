@@ -1,3 +1,5 @@
+"use client"
+
 import { ImageObject, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichPhotoProps } from "../types/photos";
