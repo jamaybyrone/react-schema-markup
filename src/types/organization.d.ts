@@ -1,4 +1,5 @@
-export interface RichOrganizationProps {
+
+export interface OrganizationType {
   name: string;
   alternateName?: string;
   description: string;
@@ -11,4 +12,8 @@ export interface RichOrganizationProps {
   };
   email: string;
   sameAs?: string[];
+}
+
+export interface RichOrganizationProps {
+  organization: OrganizationType
 }

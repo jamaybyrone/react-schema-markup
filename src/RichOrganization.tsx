@@ -2,16 +2,19 @@ import { Organization as Org, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichOrganizationProps } from "@/types/organization";
 
-const RichOrganization: FC<RichOrganizationProps> = ({
-  name,
-  alternateName,
-  description,
-  url,
-  logo,
-  address,
-  email,
-  sameAs = [],
-}) => {
+const RichOrganization: FC<RichOrganizationProps> = ({organization}) => {
+
+  const {
+    name,
+    alternateName,
+    description,
+    url,
+    logo,
+    address,
+    email,
+    sameAs = [],
+  } = organization;
+
   const jsonLd: WithContext<Org> = {
     "@context": "https://schema.org",
     "@type": "Organization",

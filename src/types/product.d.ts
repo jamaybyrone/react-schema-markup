@@ -1,4 +1,4 @@
-export interface RichProductProps {
+export interface ProductType {
   name: string;
   description: string;
   sku?: string;
@@ -10,4 +10,8 @@ export interface RichProductProps {
   availability: "InStock" | "OutOfStock";
   offersUrl?: string;
   sellerName: string;
+}
+
+export interface RichProductProps {
+  product: ProductType
 }

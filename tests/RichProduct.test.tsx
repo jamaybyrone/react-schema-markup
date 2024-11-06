@@ -15,16 +15,18 @@ const testCases: TestCase[] = [
   {
     scenario: "renders with minimal required props",
     props: {
-      name: "Test Product",
-      description: "A test product description",
-      sku: "12345",
-      brand: "Test Brand",
-      price: "99.99",
-      currency: "GBP",
-      url: "https://example.com/test-product",
-      image: "https://example.com/image.jpg",
-      availability: "InStock",
-      sellerName: "Test Seller",
+      product: {
+        name: "Test Product",
+        description: "A test product description",
+        sku: "12345",
+        brand: "Test Brand",
+        price: "99.99",
+        currency: "GBP",
+        url: "https://example.com/test-product",
+        image: "https://example.com/image.jpg",
+        availability: "InStock",
+        sellerName: "Test Seller",
+      }
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
@@ -55,17 +57,19 @@ const testCases: TestCase[] = [
   {
     scenario: "renders with custom offersUrl",
     props: {
-      name: "Another Product",
-      description: "Another product description",
-      sku: "67890",
-      brand: "Another Brand",
-      price: "149.99",
-      currency: "GBP",
-      url: "https://example.com/another-product",
-      image: "https://example.com/image2.jpg",
-      availability: "OutOfStock",
-      offersUrl: "https://example.com/custom-offer",
-      sellerName: "Another Seller",
+      product: {
+        name: "Another Product",
+        description: "Another product description",
+        sku: "67890",
+        brand: "Another Brand",
+        price: "149.99",
+        currency: "GBP",
+        url: "https://example.com/another-product",
+        image: "https://example.com/image2.jpg",
+        availability: "OutOfStock",
+        offersUrl: "https://example.com/custom-offer",
+        sellerName: "Another Seller",
+      }
     },
     expectedJsonLd: {
       "@context": "https://schema.org",

@@ -2,19 +2,20 @@ import { Product, Offer, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import {RichProductProps} from "@/types/product";
 
-const RichProduct: FC<RichProductProps> = ({
-  name,
-  description,
-  sku,
-  brand,
-  price,
-  currency,
-  url,
-  image,
-  availability,
-  offersUrl,
-  sellerName,
-}) => {
+const RichProduct: FC<RichProductProps> = ({product}) => {
+  const {
+    name,
+    description,
+    sku,
+    brand,
+    price,
+    currency,
+    url,
+    image,
+    availability,
+    offersUrl,
+    sellerName,
+  } = product
   const jsonLd: WithContext<Product> = {
     "@context": "https://schema.org",
     "@type": "Product",
