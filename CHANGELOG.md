@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.0...v1.1.1) (2024-11-06)
+
+
+### Bug Fixes
+
+* added in keywords to src files ([#33](https://github.com/jamaybyrone/react-schema-markup/issues/33)) ([735eacc](https://github.com/jamaybyrone/react-schema-markup/commit/735eacc0681e98f88306dc7684c9e0e9e03dda7f))
+
 # [1.1.0](https://github.com/jamaybyrone/react-schema-markup/compare/v1.0.1...v1.1.0) (2024-11-06)
 
 
