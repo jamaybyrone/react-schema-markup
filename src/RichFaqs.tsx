@@ -1,5 +1,5 @@
 import { FAQPage, WithContext } from "schema-dts";
-import { FaqProps } from "../types/faqs";
+import { FaqProps } from "@/types/faqs";
 import React, { FC } from "react";
 
 const RichFaqs: FC<FaqProps> = ({ questions }) => {

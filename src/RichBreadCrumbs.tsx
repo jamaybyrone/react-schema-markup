@@ -2,7 +2,7 @@
 
 import { WithContext, BreadcrumbList, ListItem } from "schema-dts";
 import React, { FC } from "react";
-import { BreadcrumbItem, RichBreadCrumbDataProps } from "../types/breadcrumb";
+import { BreadcrumbItem, RichBreadCrumbDataProps } from "@/types/breadcrumb";
 
 const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   supportedLocales = ["en", "fr", "es", "de"],

@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
 import React from "react";
-import { RichBreadCrumbDataProps } from "../src/types/breadcrumb";
+import { RichBreadCrumbDataProps } from "@/types/breadcrumb";
 import RichBreadCrumbs from "../src/RichBreadCrumbs";
 
 const setup = (props: RichBreadCrumbDataProps, locationOverride: string) => {

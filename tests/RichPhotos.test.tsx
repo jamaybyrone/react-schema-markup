@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render } from "@testing-library/react";
-import { RichPhotoProps } from "../src/types/photos";
+import { RichPhotoProps } from "@/types/photos";
 import RichPhotos from "../src/RichPhotos";
 
 interface TestCase {

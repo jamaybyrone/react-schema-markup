@@ -2,7 +2,7 @@
 
 import { ImageObject, WithContext } from "schema-dts";
 import React, { FC } from "react";
-import { RichPhotoProps } from "../types/photos";
+import { RichPhotoProps } from "@/types/photos";
 
 const RichPhotos: FC<RichPhotoProps> = ({
   contentUrl,

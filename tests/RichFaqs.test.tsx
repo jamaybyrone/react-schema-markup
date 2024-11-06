@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render } from "@testing-library/react";
 import RichFaqs from "../src/RichFaqs";
-import { FaqEntity } from "../src/types/faqs";
+import { FaqEntity } from "@/types/faqs";
 
 const mockQuestions: FaqEntity[] = [
   {
