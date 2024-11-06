@@ -7,77 +7,78 @@ import RichOrganization from "../src/RichOrganization";
 import {RichOrganizationProps} from "../src/types/organization";
 
 interface TestCase {
-  $scenario: string;
+  scenario: string;
   props: RichOrganizationProps;
   expectedJsonLd: object;
 }
 
 const testCases: TestCase[] = [
   {
-    $scenario: "renders with minimal required props",
+    scenario: "renders JSON-LD for Casa Bonita's main attraction",
     props: {
       organization: {
-        name: "Test Organization",
-        description: "A test organization",
-        url: "https://test.org",
-        logo: "https://test.org/logo.png",
+        name: "Casa Bonita",
+        description: "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
+        url: "https://casabonita.com",
+        logo: "https://casabonita.com/logo.png",
         address: {
-          streetAddress: "123 Test St",
-          addressLocality: "Test City",
-          postalCode: "12345",
+          streetAddress: "6715 W Colfax Ave",
+          addressLocality: "Lakewood",
+          postalCode: "80214",
         },
-        email: "contact@test.org",
+        email: "info@casabonita.com",
       }
-
     },
     expectedJsonLd: {
+      "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Test Organization",
-      description: "A test organization",
-      url: "https://test.org",
-      logo: "https://test.org/logo.png",
+      name: "Casa Bonita",
+      description: "A magical dining experience with cliff divers, caves, and sopapillas. Fun for the whole family… maybe.",
+      url: "https://casabonita.com",
+      logo: "https://casabonita.com/logo.png",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "123 Test St",
-        addressLocality: "Test City",
-        postalCode: "12345",
+        streetAddress: "6715 W Colfax Ave",
+        addressLocality: "Lakewood",
+        postalCode: "80214",
       },
-      email: "contact@test.org",
+      email: "info@casabonita.com",
     },
   },
   {
-    $scenario: "renders with different name and sameAs links",
+    scenario: "renders JSON-LD for Casa Bonita with alternate name and social media links",
     props: {
       organization: {
-        name: "Another Organization",
-        alternateName: "Alt Org",
-        description: "Another test organization",
-        url: "https://another.org",
-        logo: "https://another.org/logo.png",
+        name: "Casa Bonita",
+        alternateName: "The Greatest Place on Earth",
+        description: "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
+        url: "https://casabonita.com",
+        logo: "https://casabonita.com/logo.png",
         address: {
-          streetAddress: "456 Another Ave",
-          addressLocality: "Another City",
-          postalCode: "67890",
+          streetAddress: "6715 W Colfax Ave",
+          addressLocality: "Lakewood",
+          postalCode: "80214",
         },
-        email: "info@another.org",
-        sameAs: ["https://facebook.com/another", "https://twitter.com/another"],
+        email: "contact@casabonita.com",
+        sameAs: ["https://facebook.com/casabonita", "https://twitter.com/casabonita"],
       }
     },
     expectedJsonLd: {
+      "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Another Organization",
-      alternateName: "Alt Org",
-      description: "Another test organization",
-      url: "https://another.org",
-      logo: "https://another.org/logo.png",
+      name: "Casa Bonita",
+      alternateName: "The Greatest Place on Earth",
+      description: "Where else can you get dinner and watch cliff divers in a faux cave? A South Park favorite.",
+      url: "https://casabonita.com",
+      logo: "https://casabonita.com/logo.png",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "456 Another Ave",
-        addressLocality: "Another City",
-        postalCode: "67890",
+        streetAddress: "6715 W Colfax Ave",
+        addressLocality: "Lakewood",
+        postalCode: "80214",
       },
-      email: "info@another.org",
-      sameAs: ["https://facebook.com/another", "https://twitter.com/another"],
+      email: "contact@casabonita.com",
+      sameAs: ["https://facebook.com/casabonita", "https://twitter.com/casabonita"],
     },
   },
 ];

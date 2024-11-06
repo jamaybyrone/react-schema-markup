@@ -6,7 +6,7 @@ import RichEvent from "../src/RichEvent";
 
 interface TestCase {
     description: string;
-    props: { eventData: RichEventType };
+    props: RichEventProps;
     expectedJsonLd: object;
 }
 
@@ -20,7 +20,7 @@ const testCases: TestCases = [
     {
         description: "renders JSON-LD for an exaggerated 'Real British Culture' event",
         props: {
-            eventData: {
+            event: {
                 name: "Annual Celebration of Real British Culture",
                 startDate: "2023-12-25T12:00",
                 endDate: "2023-12-25T23:00",
@@ -66,7 +66,7 @@ const testCases: TestCases = [
     {
         description: "renders JSON-LD for a mysterious lecture on 'The Origins of British Weather Complaints'",
         props: {
-            eventData: {
+            event: {
                 name: "The Origins of British Weather Complaints",
                 startDate: "2023-10-10T18:00",
                 location: {

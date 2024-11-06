@@ -19,7 +19,7 @@ const testCases: TestCase[] = [
         contentUrl: "https://example.com/photo.jpg",
         creditText: "Example Credit",
         copyrightNotice: "© Example 2023",
-        creatorName: "John Doe",
+        creatorName: "Bo Jangles",
       }
     },
     expectedJsonLd: {
@@ -29,7 +29,7 @@ const testCases: TestCase[] = [
       copyrightNotice: "© Example 2023",
       creator: {
         "@type": "Person",
-        name: "John Doe",
+        name: "Bo Jangles",
       },
     },
   },
@@ -42,7 +42,7 @@ const testCases: TestCase[] = [
        license: "https://example.com/custom-license",
        acquireLicensePage: "https://example.com/license-page",
        copyrightNotice: "© Another Example 2023",
-       creatorName: "Jane Smith",
+       creatorName: "Bo Jangles",
      }
     },
     expectedJsonLd: {
@@ -54,7 +54,7 @@ const testCases: TestCase[] = [
       copyrightNotice: "© Another Example 2023",
       creator: {
         "@type": "Person",
-        name: "Jane Smith",
+        name: "Bo Jangles",
       },
     },
   },

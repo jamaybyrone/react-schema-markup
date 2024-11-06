@@ -18,5 +18,5 @@ export interface RichEventType {
 }
 
 export interface RichEventProps {
-  eventData: RichEventType;
+  event: RichEventType;
 }

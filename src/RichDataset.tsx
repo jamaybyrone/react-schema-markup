@@ -2,17 +2,18 @@ import { Dataset, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichDatasetProps } from "@/types/dataset";
 
-const RichDataset: FC<RichDatasetProps> = ({
-  name,
-  description,
-  url,
-  keywords,
-  license,
-  creatorName,
-  creatorUrl,
-  datePublished,
-  spatialCoverage,
-}) => {
+const RichDataset: FC<RichDatasetProps> = ({dataset}) => {
+  const {
+    name,
+    description,
+    url,
+    keywords,
+    license,
+    creatorName,
+    creatorUrl,
+    datePublished,
+    spatialCoverage,
+  } = dataset
   const jsonLd: WithContext<Dataset> = {
     "@context": "https://schema.org",
     "@type": "Dataset",

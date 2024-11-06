@@ -2,7 +2,7 @@ import { Event, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichEventProps } from "@/types/event";
 
-const RichEvent: FC<RichEventProps> = ({ eventData }) => {
+const RichEvent: FC<RichEventProps> = ({ event }) => {
   const {
     name,
     startDate,
@@ -12,7 +12,7 @@ const RichEvent: FC<RichEventProps> = ({ eventData }) => {
     description,
     performer,
     organizer,
-  } = eventData;
+  } = event;
   const jsonLd: WithContext<Event> = {
     "@context": "https://schema.org",
     "@type": "Event",

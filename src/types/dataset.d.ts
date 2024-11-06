@@ -1,4 +1,4 @@
-export interface RichDatasetProps {
+export interface DataSetType {
   name: string;
   description: string;
   url: string;
@@ -8,4 +8,8 @@ export interface RichDatasetProps {
   creatorUrl?: string;
   datePublished?: string;
   spatialCoverage?: string;
+}
+
+export interface RichDatasetProps {
+  dataset: DataSetType
 }

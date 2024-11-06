@@ -8,18 +8,18 @@ import {FaqEntity} from "../src/types/faqs";
 const mockQuestions: FaqEntity[] = [
   {
     "@type": "Question",
-    name: "What is your return policy?",
+    name: "How large is your cat?",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "You can return any item within 30 days.",
+      text: "Oh lawd he big.",
     },
   },
   {
     "@type": "Question",
-    name: "How long does shipping take?",
+    name: "Can you microwave paint?",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "Shipping typically takes 5-7 business days.",
+      text: "Yes.",
     },
   },
 ];

@@ -1,18 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import RichDataset from "../src/RichDataset";
-
-interface RichDatasetProps {
-  name: string;
-  description: string;
-  url: string;
-  keywords?: string[];
-  license?: string;
-  creatorName: string;
-  creatorUrl?: string;
-  datePublished?: string;
-  spatialCoverage?: string;
-}
+import {RichDatasetProps} from "../src/types/dataset";
 
 interface TestCase {
   scenario: string;
@@ -30,15 +19,17 @@ const testCases: TestCases = [
   {
     scenario: "renders component for a global temperature dataset",
     props: {
-      name: "Global Temperature Data 2020",
-      description: "A dataset containing global temperature readings for the year 2020.",
-      url: "https://example.com/global-temperature-data-2020",
-      keywords: ["temperature", "climate", "2020", "global data"],
-      license: "https://creativecommons.org/licenses/by/4.0/",
-      creatorName: "John Doe",
-      creatorUrl: "https://example.com/johndoe",
-      datePublished: "2020-12-31",
-      spatialCoverage: "Global",
+      dataset: {
+        name: "Global Temperature Data 2020",
+        description: "A dataset containing global temperature readings for the year 2020.",
+        url: "https://example.com/global-temperature-data-2020",
+        keywords: ["temperature", "climate", "2020", "global data"],
+        license: "https://creativecommons.org/licenses/by/4.0/",
+        creatorName: "John Doe",
+        creatorUrl: "https://example.com/johndoe",
+        datePublished: "2020-12-31",
+        spatialCoverage: "Global",
+      }
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
@@ -60,11 +51,13 @@ const testCases: TestCases = [
   {
     scenario: "renders component for a city population dataset",
     props: {
-      name: "City Population Data",
-      description: "A dataset with population data for major cities.",
-      url: "https://example.com/city-population-data",
-      creatorName: "Jane Smith",
-      datePublished: "2021-01-01",
+      dataset: {
+        name: "City Population Data",
+        description: "A dataset with population data for major cities.",
+        url: "https://example.com/city-population-data",
+        creatorName: "Jane Smith",
+        datePublished: "2021-01-01",
+      }
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
