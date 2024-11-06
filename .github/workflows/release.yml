@@ -6,11 +6,9 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types:
-      - closed
 env:
   NODE_VERSION: '21'
 jobs:
