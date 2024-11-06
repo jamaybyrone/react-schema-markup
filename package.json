@@ -17,10 +17,13 @@
     "react",
     "schema",
     "json-ld",
+    "markup",
     "structured-data",
     "seo",
     "breadcrumb",
-    "react-library"
+    "react-library",
+    "structured-data-markup"
+
   ],
   "author": "Jamie Byrne",
   "scripts": {
