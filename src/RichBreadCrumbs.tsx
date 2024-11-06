@@ -48,7 +48,7 @@ const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
         name: item.name,
         item: item.url,
       })
-    ),
+    )
   };
 
   return (

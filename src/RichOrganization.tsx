@@ -29,7 +29,7 @@ const RichOrganization: FC<RichOrganizationProps> = ({ organization }) => {
       postalCode: address.postalCode,
     },
     email,
-    sameAs,
+    sameAs
   };
 
   return (

@@ -39,7 +39,7 @@ const RichProduct: FC<RichProductProps> = ({ product }) => {
       },
     } as Offer,
     image,
-    url,
+    url
   };
 
   return (

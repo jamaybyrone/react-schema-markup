@@ -6,7 +6,7 @@ const RichFaqs: FC<FaqProps> = ({ questions }) => {
   const jsonLd: WithContext<FAQPage> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: questions,
+    mainEntity: questions
   };
 
   return (

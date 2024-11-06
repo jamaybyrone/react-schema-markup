@@ -29,7 +29,7 @@ const RichDataset: FC<RichDatasetProps> = ({ dataset }) => {
       url: creatorUrl,
     },
     datePublished,
-    spatialCoverage,
+    spatialCoverage
   };
 
   return (

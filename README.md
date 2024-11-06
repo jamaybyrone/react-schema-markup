@@ -71,32 +71,32 @@ This will produce:
 {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: [
+      "itemListElement": [
         {
           "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.example.com",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.example.com"
         },
         {
           "@type": "ListItem",
-          position: 2,
-          name: "Tester",
-          item: "https://www.example.com/tester",
+          "position": 2,
+          "name": "Tester",
+          "item": "https://www.example.com/tester"
         },
         {
           "@type": "ListItem",
-          position: 3,
-          name: "Big",
-          item: "https://www.example.com/tester/big",
+          "position": 3,
+          "name": "Big",
+          "item": "https://www.example.com/tester/big"
         },
         {
           "@type": "ListItem",
-          position: 4,
-          name: "Spender",
-          item: "https://www.example.com/tester/big/spender",
-        },
-      ],
+          "position": 4,
+          "name": "Spender",
+          "item": "https://www.example.com/tester/big/spender"
+        }
+      ]
     }
 ```
 Given this url which has a locale of en: https://www.example.com/en/tester
@@ -106,20 +106,20 @@ This will produce:
 {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: [
+      "itemListElement": [
         {
           "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.example.com/en",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.example.com/en"
         },
         {
           "@type": "ListItem",
-          position: 2,
-          name: "Tester",
-          item: "https://www.example.com/en/tester",
-        },
-      ],
+          "position": 2,
+          "name": "Tester",
+          "item": "https://www.example.com/en/tester"
+        }
+      ]
     }
 ```
 Props:
@@ -133,20 +133,20 @@ and you expect it to return:
 {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: [
+      "itemListElement": [
         {
           "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.example.com",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.example.com"
         },
         {
           "@type": "ListItem",
-          position: 2,
-          name: "Cat",
-          item: "https://www.example.com/subdirectory/cat",
-        },
-      ],
+          "position": 2,
+          "name": "Cat",
+          "item": "https://www.example.com/subdirectory/cat"
+        }
+      ]
     }
 ```
 Then this isn't for you and you're not invited to my birthday party, sort your directories out.

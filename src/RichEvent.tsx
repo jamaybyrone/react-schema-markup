@@ -34,7 +34,7 @@ const RichEvent: FC<RichEventProps> = ({ event }) => {
       "@type": "Organization",
       name: organizer.name,
       url: organizer.url,
-    },
+    }
   };
 
   return (

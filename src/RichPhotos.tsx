@@ -26,7 +26,7 @@ const RichPhotos: FC<RichPhotoProps> = ({ photo }) => {
     creator: {
       "@type": "Person",
       name: creatorName,
-    },
+    }
   };
 
   return (
