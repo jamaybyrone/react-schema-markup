@@ -1,8 +1,8 @@
 import { Product, Offer, WithContext } from "schema-dts";
 import React, { FC } from "react";
-import {RichProductProps} from "@/types/product";
+import { RichProductProps } from "@/types/product";
 
-const RichProduct: FC<RichProductProps> = ({product}) => {
+const RichProduct: FC<RichProductProps> = ({ product }) => {
   const {
     name,
     description,
@@ -15,7 +15,7 @@ const RichProduct: FC<RichProductProps> = ({product}) => {
     availability,
     offersUrl,
     sellerName,
-  } = product
+  } = product;
   const jsonLd: WithContext<Product> = {
     "@context": "https://schema.org",
     "@type": "Product",

@@ -8,5 +8,5 @@ export interface PhotoType {
 }
 
 export interface RichPhotoProps {
-  photo: PhotoType
+  photo: PhotoType;
 }

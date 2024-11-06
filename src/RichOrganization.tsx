@@ -2,8 +2,7 @@ import { Organization as Org, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichOrganizationProps } from "@/types/organization";
 
-const RichOrganization: FC<RichOrganizationProps> = ({organization}) => {
-
+const RichOrganization: FC<RichOrganizationProps> = ({ organization }) => {
   const {
     name,
     alternateName,

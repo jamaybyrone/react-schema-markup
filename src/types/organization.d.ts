@@ -1,4 +1,3 @@
-
 export interface OrganizationType {
   name: string;
   alternateName?: string;
@@ -15,5 +14,5 @@ export interface OrganizationType {
 }
 
 export interface RichOrganizationProps {
-  organization: OrganizationType
+  organization: OrganizationType;
 }

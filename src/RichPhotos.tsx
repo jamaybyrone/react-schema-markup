@@ -1,11 +1,10 @@
-"use client"
+"use client";
 
 import { ImageObject, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichPhotoProps } from "@/types/photos";
 
-const RichPhotos: FC<RichPhotoProps> = ({photo}) => {
-
+const RichPhotos: FC<RichPhotoProps> = ({ photo }) => {
   const {
     contentUrl,
     creditText,
@@ -13,7 +12,7 @@ const RichPhotos: FC<RichPhotoProps> = ({photo}) => {
     acquireLicensePage,
     copyrightNotice,
     creatorName,
-  } = photo
+  } = photo;
   const domain = typeof window !== "undefined" ? window.location.origin : "";
 
   const jsonLd: WithContext<ImageObject> = {

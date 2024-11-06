@@ -13,5 +13,5 @@ export interface ProductType {
 }
 
 export interface RichProductProps {
-  product: ProductType
+  product: ProductType;
 }
