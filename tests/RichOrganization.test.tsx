@@ -2,8 +2,9 @@ import "@testing-library/jest-dom";
 
 import React from "react";
 import { render } from "@testing-library/react";
-import { RichOrganizationProps } from "@/types/organization";
+
 import RichOrganization from "../src/RichOrganization";
+import {RichOrganizationProps} from "../src/types/organization";
 
 interface TestCase {
   $scenario: string;

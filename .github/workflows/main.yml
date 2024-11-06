@@ -3,8 +3,8 @@ name: Tests And Lint
 on:
   pull_request:
     branches:
-      - 'dev'
-      - 'main'
+      - dev
+      - main
 
 env:
   NODE_VERSION: '21'

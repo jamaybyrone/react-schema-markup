@@ -4,13 +4,13 @@
   "description": "A React library for integrating structured-data (JSON-LD) into React applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/yourusername/react-schema-markup",
+  "homepage": "https://github.com/jamaybyrone/react-schema-markup",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/react-schema-markup.git"
+    "url": "git+https://github.com/jamaybyrone/react-schema-markup.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-schema-markup/issues"
+    "url": "https://github.com/jamaybyrone/react-schema-markup/issues"
   },
   "license": "MIT",
   "keywords": [
