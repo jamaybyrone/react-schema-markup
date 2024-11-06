@@ -1,6 +1,8 @@
 # [1.1.0](https://github.com/jamaybyrone/react-schema-markup/compare/v1.0.1...v1.1.0) (2024-11-06)
 
 
+
+
 ### Bug Fixes
 
 * update dependencies ([#14](https://github.com/jamaybyrone/react-schema-markup/issues/14)) ([f11e371](https://github.com/jamaybyrone/react-schema-markup/commit/f11e3719c06d15cf33b5d2d573549153f5fc66cd)), closes [#4](https://github.com/jamaybyrone/react-schema-markup/issues/4) [#6](https://github.com/jamaybyrone/react-schema-markup/issues/6) [#8](https://github.com/jamaybyrone/react-schema-markup/issues/8) [#11](https://github.com/jamaybyrone/react-schema-markup/issues/11) [#4](https://github.com/jamaybyrone/react-schema-markup/issues/4) [#6](https://github.com/jamaybyrone/react-schema-markup/issues/6) [#8](https://github.com/jamaybyrone/react-schema-markup/issues/8) [#13](https://github.com/jamaybyrone/react-schema-markup/issues/13) [#11](https://github.com/jamaybyrone/react-schema-markup/issues/11) [#12](https://github.com/jamaybyrone/react-schema-markup/issues/12) [#11](https://github.com/jamaybyrone/react-schema-markup/issues/11) [#12](https://github.com/jamaybyrone/react-schema-markup/issues/12)
