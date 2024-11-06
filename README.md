@@ -13,3 +13,16 @@ A React library for easily integrating schema.org structured data (JSON-LD) into
 
 ```bash
 npm install react-schema-markup
+```
+
+# TODO
+ - readme/doccie mcdocs
+   - examples
+   - description
+   - usage
+ - actions
+ - registry
+ - pedantic release
+ - more schemas
+
+
