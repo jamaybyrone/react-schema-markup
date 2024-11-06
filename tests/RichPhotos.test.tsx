@@ -3,7 +3,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import RichPhotos from "../src/RichPhotos";
-import {RichPhotoProps} from "../src/types/photos";
+import { RichPhotoProps } from "../src/types/photos";
 
 interface TestCase {
   scenario: string;
@@ -15,10 +15,12 @@ const testCases: TestCase[] = [
   {
     scenario: "renders with minimal required props",
     props: {
-      contentUrl: "https://example.com/photo.jpg",
-      creditText: "Example Credit",
-      copyrightNotice: "© Example 2023",
-      creatorName: "John Doe",
+      photo: {
+        contentUrl: "https://example.com/photo.jpg",
+        creditText: "Example Credit",
+        copyrightNotice: "© Example 2023",
+        creatorName: "Bo Jangles",
+      },
     },
     expectedJsonLd: {
       "@type": "ImageObject",
@@ -27,19 +29,21 @@ const testCases: TestCase[] = [
       copyrightNotice: "© Example 2023",
       creator: {
         "@type": "Person",
-        name: "John Doe",
+        name: "Bo Jangles",
       },
     },
   },
   {
     scenario: "renders with custom license and acquireLicensePage",
     props: {
-      contentUrl: "https://example.com/photo2.jpg",
-      creditText: "Another Credit",
-      license: "https://example.com/custom-license",
-      acquireLicensePage: "https://example.com/license-page",
-      copyrightNotice: "© Another Example 2023",
-      creatorName: "Jane Smith",
+      photo: {
+        contentUrl: "https://example.com/photo2.jpg",
+        creditText: "Another Credit",
+        license: "https://example.com/custom-license",
+        acquireLicensePage: "https://example.com/license-page",
+        copyrightNotice: "© Another Example 2023",
+        creatorName: "Bo Jangles",
+      },
     },
     expectedJsonLd: {
       "@type": "ImageObject",
@@ -50,7 +54,7 @@ const testCases: TestCase[] = [
       copyrightNotice: "© Another Example 2023",
       creator: {
         "@type": "Person",
-        name: "Jane Smith",
+        name: "Bo Jangles",
       },
     },
   },

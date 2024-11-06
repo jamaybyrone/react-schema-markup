@@ -2,8 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render } from "@testing-library/react";
 import RichProduct from "../src/RichProduct";
-import {RichProductProps} from "../src/types/product";
-
+import { RichProductProps } from "../src/types/product";
 
 interface TestCase {
   scenario: string;
@@ -13,84 +12,93 @@ interface TestCase {
 
 const testCases: TestCase[] = [
   {
-    scenario: "renders with minimal required props",
+    scenario:
+      "renders JSON-LD for 'Lord Marmalade IV's Exquisite Posh Picnic Basket'",
     props: {
-      name: "Test Product",
-      description: "A test product description",
-      sku: "12345",
-      brand: "Test Brand",
-      price: "99.99",
-      currency: "GBP",
-      url: "https://example.com/test-product",
-      image: "https://example.com/image.jpg",
-      availability: "InStock",
-      sellerName: "Test Seller",
+      product: {
+        name: "Lord Marmalade IV's Exquisite Posh Picnic Basket",
+        description:
+          "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
+        sku: "LORD-0001",
+        brand: "Unnecessarily Luxurious Essentials",
+        price: "4999.99",
+        currency: "GBP",
+        url: "https://example.com/posh-picnic-basket",
+        image: "https://example.com/luxury-picnic.jpg",
+        availability: "OutOfStock",
+        sellerName: "The Grandiose Goods Company",
+      },
     },
     expectedJsonLd: {
       "@context": "https://schema.org",
       "@type": "Product",
-      name: "Test Product",
-      description: "A test product description",
-      sku: "12345",
+      name: "Lord Marmalade IV's Exquisite Posh Picnic Basket",
+      description:
+        "An absurdly overpriced picnic basket with everything a true aristocrat needs to avoid mingling with commoners. Includes a hand-polished silver spoon for tasting the air.",
+      sku: "LORD-0001",
       brand: {
         "@type": "Brand",
-        name: "Test Brand",
+        name: "Unnecessarily Luxurious Essentials",
       },
       offers: {
         "@type": "Offer",
-        url: "https://example.com/test-product",
+        url: "https://example.com/posh-picnic-basket",
         priceCurrency: "GBP",
-        price: "99.99",
-        itemCondition: "https://schema.org/NewCondition",
-        availability: "https://schema.org/InStock",
-        seller: {
-          "@type": "Organization",
-          name: "Test Seller",
-        },
-      },
-      image: "https://example.com/image.jpg",
-      url: "https://example.com/test-product",
-    },
-  },
-  {
-    scenario: "renders with custom offersUrl",
-    props: {
-      name: "Another Product",
-      description: "Another product description",
-      sku: "67890",
-      brand: "Another Brand",
-      price: "149.99",
-      currency: "GBP",
-      url: "https://example.com/another-product",
-      image: "https://example.com/image2.jpg",
-      availability: "OutOfStock",
-      offersUrl: "https://example.com/custom-offer",
-      sellerName: "Another Seller",
-    },
-    expectedJsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: "Another Product",
-      description: "Another product description",
-      sku: "67890",
-      brand: {
-        "@type": "Brand",
-        name: "Another Brand",
-      },
-      offers: {
-        "@type": "Offer",
-        url: "https://example.com/custom-offer",
-        priceCurrency: "GBP",
-        price: "149.99",
+        price: "4999.99",
         itemCondition: "https://schema.org/NewCondition",
         availability: "https://schema.org/OutOfStock",
         seller: {
           "@type": "Organization",
-          name: "Another Seller",
+          name: "The Grandiose Goods Company",
         },
       },
-      image: "https://example.com/image2.jpg",
-      url: "https://example.com/another-product",
+      image: "https://example.com/luxury-picnic.jpg",
+      url: "https://example.com/posh-picnic-basket",
+    },
+  },
+  {
+    scenario:
+      "renders JSON-LD for 'The Earl of Eccentricity's Umbrella for Indoor Use Only'",
+    props: {
+      product: {
+        name: "The Earl of Eccentricity's Umbrella for Indoor Use Only",
+        description:
+          "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
+        sku: "ECCENTRIC-UMBRELLA",
+        brand: "Truly Unnecessary Items",
+        price: "299.99",
+        currency: "GBP",
+        url: "https://example.com/indoor-umbrella",
+        image: "https://example.com/umbrella.jpg",
+        availability: "InStock",
+        sellerName: "Needless Necessities Ltd.",
+      },
+    },
+    expectedJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "The Earl of Eccentricity's Umbrella for Indoor Use Only",
+      description:
+        "A perfectly impractical umbrella designed solely for indoors, protecting one from invisible rain and any lingering sense of reality. A must-have for the absurdly cautious.",
+      sku: "ECCENTRIC-UMBRELLA",
+      brand: {
+        "@type": "Brand",
+        name: "Truly Unnecessary Items",
+      },
+      offers: {
+        "@type": "Offer",
+        url: "https://example.com/indoor-umbrella",
+        priceCurrency: "GBP",
+        price: "299.99",
+        itemCondition: "https://schema.org/NewCondition",
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@type": "Organization",
+          name: "Needless Necessities Ltd.",
+        },
+      },
+      image: "https://example.com/umbrella.jpg",
+      url: "https://example.com/indoor-umbrella",
     },
   },
 ];

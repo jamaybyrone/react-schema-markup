@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import RichBreadCrumbs from "../src/RichBreadCrumbs";
-import {RichBreadCrumbDataProps} from "../src/types/breadcrumb";
+import { RichBreadCrumbDataProps } from "../src/types/breadcrumb";
 
 const setup = (props: RichBreadCrumbDataProps, locationOverride: string) => {
   const mockLocation = {

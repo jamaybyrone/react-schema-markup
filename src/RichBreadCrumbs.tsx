@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { WithContext, BreadcrumbList, ListItem } from "schema-dts";
 import React, { FC } from "react";
