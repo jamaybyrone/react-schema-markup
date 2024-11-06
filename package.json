@@ -32,6 +32,11 @@
     "test": "jest --coverage",
     "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "release": {
     "branches": [
       "main"
