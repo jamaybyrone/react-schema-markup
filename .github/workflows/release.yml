@@ -40,6 +40,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
 
+      - name: Set Git user name and email
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
       - name: Merge main into dev
         run: |
           git fetch origin
