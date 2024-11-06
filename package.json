@@ -41,7 +41,7 @@
   ],
   "release": {
     "branches": [
-      "dev"
+      "main"
     ],
     "plugins": [
       [
