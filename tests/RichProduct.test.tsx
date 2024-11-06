@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render } from "@testing-library/react";
 import { RichProductProps } from "../src/types/product";
-import RichProduct from "../src/components/RichProduct";
+import RichProduct from "../src/RichProduct";
 
 interface TestCase {
   scenario: string;
