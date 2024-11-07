@@ -2,8 +2,6 @@
   "name": "react-schema-markup",
   "version": "1.1.1",
   "description": "A React library for integrating structured-data (JSON-LD) into React applications.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "homepage": "https://github.com/jamaybyrone/react-schema-markup",
   "repository": {
     "type": "git",
@@ -26,7 +24,7 @@
   ],
   "author": "Jamie Byrne",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "dev": "tsc --watch",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
@@ -34,11 +32,6 @@
     "test": "jest --coverage",
     "prepublishOnly": "npm run build"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
   "release": {
     "branches": [
       "main"
@@ -74,10 +67,10 @@
     "schema-dts": "1.1.2"
   },
   "devDependencies": {
-    "@semantic-release/github": "11.0.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "11.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
     "@testing-library/jest-dom": "^6.6.3",
@@ -96,6 +89,7 @@
     "prettier": "^2.0.0",
     "semantic-release": "^24.2.0",
     "ts-jest": "^29.2.5",
+    "tsc-alias": "^1.8.10",
     "typescript": "5.6.3"
   },
   "publishConfig": {
