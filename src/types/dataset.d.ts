@@ -1,3 +1,5 @@
+import { ElementType } from "react";
+
 export interface DataSetType {
   name: string;
   description: string;
@@ -12,4 +14,5 @@ export interface DataSetType {
 
 export interface RichDatasetProps {
   dataset: DataSetType;
+  ScriptWrap?: ElementType;
 }

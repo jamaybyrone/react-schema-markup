@@ -1,3 +1,5 @@
+import { ElementType } from "react";
+
 export interface RichEventType {
   name: string;
   startDate: string;
@@ -19,4 +21,5 @@ export interface RichEventType {
 
 export interface RichEventProps {
   event: RichEventType;
+  ScriptWrap?: ElementType;
 }

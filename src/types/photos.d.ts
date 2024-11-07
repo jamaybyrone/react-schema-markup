@@ -1,3 +1,5 @@
+import { ElementType } from "react";
+
 export interface PhotoType {
   contentUrl: string;
   creditText: string;
@@ -9,4 +11,5 @@ export interface PhotoType {
 
 export interface RichPhotoProps {
   photo: PhotoType;
+  ScriptWrap?: ElementType;
 }

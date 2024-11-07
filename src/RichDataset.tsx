@@ -2,7 +2,8 @@ import { Dataset, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichDatasetProps } from "@/types/dataset";
 
-const RichDataset: FC<RichDatasetProps> = ({ dataset }) => {
+const RichDataset: FC<RichDatasetProps> = ({ dataset, ScriptWrap }) => {
+  const Wrapper = ScriptWrap ?? "script";
   const {
     name,
     description,
@@ -33,9 +34,9 @@ const RichDataset: FC<RichDatasetProps> = ({ dataset }) => {
   };
 
   return (
-    <script id="DatasetStructure" type="application/ld+json">
+    <Wrapper id="DatasetStructure" type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
-    </script>
+    </Wrapper>
   );
 };
 
