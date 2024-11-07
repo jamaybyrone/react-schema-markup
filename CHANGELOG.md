@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.3...v1.1.4) (2024-11-07)
+
+
+### Bug Fixes
+
+* build with tsc-aliases ([056ed26](https://github.com/jamaybyrone/react-schema-markup/commit/056ed264bfd794aab971835e317d97d6fc49c610))
+
 ## [1.1.3](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.2...v1.1.3) (2024-11-07)
 
 
