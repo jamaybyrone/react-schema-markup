@@ -24,14 +24,15 @@
   ],
   "author": "Jamie Byrne",
   "scripts": {
-    "build": "tsc && tsc-alias",
-    "dev": "tsc --watch",
+    "build": "tsc",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "format": "prettier --write src/**/*.{ts,tsx}",
     "test": "jest --coverage",
     "prepublishOnly": "npm run build"
   },
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "release": {
     "branches": [
       "main"
