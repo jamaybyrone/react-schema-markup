@@ -1,13 +1,13 @@
-export { BreadcrumbItem, RichBreadCrumbDataProps } from './breadcrumb';
+export { BreadcrumbItem, RichBreadCrumbDataProps } from '@/types/breadcrumb';
 
-export { DataSetType, RichDatasetProps } from './dataset';
+export { DataSetType, RichDatasetProps } from '@/types/dataset';
 
-export { RichEventType, RichEventProps } from './event';
+export { RichEventType, RichEventProps } from '@/types/event';
 
-export { FaqAcceptedAnswer, FaqEntity, FaqProps } from './faqs';
+export { FaqAcceptedAnswer, FaqEntity, FaqProps } from '@/types/faqs';
 
-export { PhotoType, RichPhotoProps } from './photos';
+export { PhotoType, RichPhotoProps } from '@/types/photos';
 
-export { ProductType, RichProductProps } from './product';
+export { ProductType, RichProductProps } from '@/types/product';
 
-export { OrganizationType, RichOrganizationProps } from './organization';
+export { OrganizationType, RichOrganizationProps } from '@/types/organization';
