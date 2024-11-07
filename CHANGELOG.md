@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.5...v1.2.0) (2024-11-07)
+
+
+### Features
+
+* webpack compiler ([2d5fccc](https://github.com/jamaybyrone/react-schema-markup/commit/2d5fccc0aa9e1d007c4fd012cf5fe72780a2ad63))
+
 ## [1.1.5](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.4...v1.1.5) (2024-11-07)
 
 
