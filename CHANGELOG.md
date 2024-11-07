@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.1...v1.1.2) (2024-11-07)
+
+
+### Bug Fixes
+
+* Serverside rendering ([#35](https://github.com/jamaybyrone/react-schema-markup/issues/35)) ([29936f6](https://github.com/jamaybyrone/react-schema-markup/commit/29936f6bd415d3b3d548b51a94739ae019c360a0))
+* updated tsconfig to include types in dist ([#34](https://github.com/jamaybyrone/react-schema-markup/issues/34)) ([c29e78f](https://github.com/jamaybyrone/react-schema-markup/commit/c29e78f8dd8eb5c6d977e85d5d83b9e96024e323))
+
 ## [1.1.1](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.0...v1.1.1) (2024-11-06)
 
 
