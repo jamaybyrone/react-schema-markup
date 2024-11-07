@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.0...v1.2.1) (2024-11-07)
+
+
+### Bug Fixes
+
+* added in prepublish ([c1d79e5](https://github.com/jamaybyrone/react-schema-markup/commit/c1d79e527be605c0149fc542deacf2b0d5c70c7b))
+
 # [1.2.0](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.5...v1.2.0) (2024-11-07)
 
 
