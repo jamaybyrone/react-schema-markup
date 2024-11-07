@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.4...v1.1.5) (2024-11-07)
+
+
+### Bug Fixes
+
+* remove things from the package ([b7842b9](https://github.com/jamaybyrone/react-schema-markup/commit/b7842b9a05338d8b51d62834702868fbb40e8681))
+
 ## [1.1.4](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.3...v1.1.4) (2024-11-07)
 
 
