@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.2...v1.1.3) (2024-11-07)
+
+
+### Bug Fixes
+
+* build type definitions ([fde50a9](https://github.com/jamaybyrone/react-schema-markup/commit/fde50a9695e77fa586edf485a772fb1872134d56))
+* Serverside rendering ([bec8f23](https://github.com/jamaybyrone/react-schema-markup/commit/bec8f238703a5b31eb8ec48fff66ba94dc6b29af))
+
 ## [1.1.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.1.1...v1.1.2) (2024-11-07)
 
 
