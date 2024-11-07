@@ -1,3 +1,5 @@
+import { ElementType } from "react";
+
 export interface ProductType {
   name: string;
   description: string;
@@ -14,4 +16,5 @@ export interface ProductType {
 
 export interface RichProductProps {
   product: ProductType;
+  ScriptWrap?: ElementType;
 }

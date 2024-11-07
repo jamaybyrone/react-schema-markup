@@ -2,20 +2,22 @@ import { Product, Offer, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichProductProps } from "@/types/product";
 
-const RichProduct: FC<RichProductProps> = ({ product }) => {
+const RichProduct: FC<RichProductProps> = ({ product, ScriptWrap }) => {
   const {
     name,
     description,
     sku,
     brand,
     price,
-    currency,
+    currency = "USD", // Default currency if not provided
     url,
     image,
-    availability,
+    availability = "InStock", // Default to "InStock" if not provided
     offersUrl,
-    sellerName,
+    sellerName = "Default Seller", // Default seller name if not provided
   } = product;
+
+  // Structured data in JSON-LD format
   const jsonLd: WithContext<Product> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -41,11 +43,12 @@ const RichProduct: FC<RichProductProps> = ({ product }) => {
     image,
     url,
   };
+  const Wrapper = ScriptWrap ?? "script";
 
   return (
-    <script id="ProductStructure" type="application/ld+json">
+    <Wrapper id="ProductStructure" type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
-    </script>
+    </Wrapper>
   );
 };
 

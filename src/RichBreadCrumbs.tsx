@@ -7,10 +7,13 @@ import { BreadcrumbItem, RichBreadCrumbDataProps } from "@/types/breadcrumb";
 const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   supportedLocales = ["en", "fr", "es", "de"],
   includeTrailingSlash = false,
+  ScriptWrap,
 }) => {
   if (typeof window === "undefined") {
     return null;
   }
+
+  const Wrapper = ScriptWrap ?? "script";
 
   const { origin, pathname } = window.location;
   const pathSegments = pathname
@@ -52,9 +55,9 @@ const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   };
 
   return (
-    <script id="BreadCrumbStructure" type="application/ld+json">
+    <Wrapper id="BreadCrumbStructure" type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
-    </script>
+    </Wrapper>
   );
 };
 

@@ -2,7 +2,8 @@ import { FAQPage, WithContext } from "schema-dts";
 import { FaqProps } from "@/types/faqs";
 import React, { FC } from "react";
 
-const RichFaqs: FC<FaqProps> = ({ questions }) => {
+const RichFaqs: FC<FaqProps> = ({ questions, ScriptWrap }) => {
+  const Wrapper = ScriptWrap ?? "script";
   const jsonLd: WithContext<FAQPage> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -10,9 +11,9 @@ const RichFaqs: FC<FaqProps> = ({ questions }) => {
   };
 
   return (
-    <script id="FAQStructure" type="application/ld+json">
+    <Wrapper id="FAQStructure" type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
-    </script>
+    </Wrapper>
   );
 };
 
