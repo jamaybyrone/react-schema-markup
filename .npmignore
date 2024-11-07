@@ -1,2 +1,8 @@
 src/
-test/
+.github/
+tests/
+jest.config.js
+tsconfig.json
+CHANGELOG.md
+.eslintrc.json
+
