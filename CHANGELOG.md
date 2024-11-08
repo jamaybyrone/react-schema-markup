@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.1...v1.2.2) (2024-11-08)
+
+
+### Bug Fixes
+
+* faqs duplication of code ([3144c7a](https://github.com/jamaybyrone/react-schema-markup/commit/3144c7ab8417612ad5ae207c2ba11061244b3ad6))
+
 ## [1.2.1](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.0...v1.2.1) (2024-11-07)
 
 
