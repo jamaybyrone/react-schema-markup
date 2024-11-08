@@ -2,13 +2,21 @@ import { FAQPage, WithContext } from "schema-dts";
 import { FaqProps } from "@/types/faqs";
 import React, { FC } from "react";
 
-const RichFaqs: FC<FaqProps> = ({ questions, ScriptWrap }) => {
+const RichFaqs: FC<FaqProps> = ({ faqs, ScriptWrap }) => {
   const Wrapper = ScriptWrap ?? "script";
-  const jsonLd: WithContext<FAQPage> = {
+  const formattedQuestions = faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  }));
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: questions,
-  };
+    mainEntity: formattedQuestions,
+  } as WithContext<FAQPage>;
 
   return (
     <Wrapper id="FAQStructure" type="application/ld+json">

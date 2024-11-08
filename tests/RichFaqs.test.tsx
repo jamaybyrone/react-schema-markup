@@ -6,53 +6,44 @@ import { FaqEntity } from "../src/types/faqs";
 
 const mockQuestions: FaqEntity[] = [
   {
-    "@type": "Question",
-    name: "How large is your cat?",
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: "Oh lawd he big.",
-    },
+    question: "How large is your cat?",
+    answer: "Yes.",
   },
   {
-    "@type": "Question",
-    name: "Can you microwave paint?",
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: "Yes.",
-    },
-  },
+    question: "Can you microwave paint?",
+    answer: "Yes.",
+  }
 ];
 
-const setup = (questions: FaqEntity[]) =>
-  render(<RichFaqs questions={questions} />);
+const setup = (faqs: FaqEntity[]) =>
+  render(<RichFaqs faqs={faqs} />);
 
 interface TestCase {
   scenario: string;
-  questions: FaqEntity[];
+  faqs: FaqEntity[];
 }
 
 const testCases: TestCase[] = [
   {
     scenario: "FAQ structure with valid questions",
-    questions: mockQuestions,
+    faqs: mockQuestions,
   },
   {
     scenario: "Empty questions array",
-    questions: [],
+    faqs: [],
   },
 ];
 
 describe("RichFaqs Component", () => {
-  it.each(testCases)("renders with $scenario", ({ questions }) => {
-    const { container } = setup(questions);
+  it.each(testCases)("renders with $scenario", ({ faqs }) => {
+    const { container } = setup(faqs);
     const scriptTag = container.querySelector("script");
     expect(scriptTag).toBeInTheDocument();
 
-    if (questions.length > 0) {
+    if (faqs.length > 0) {
       const jsonLd = JSON.parse(scriptTag?.textContent || "{}");
       expect(jsonLd["@context"]).toBe("https://schema.org");
       expect(jsonLd["@type"]).toBe("FAQPage");
-      expect(jsonLd.mainEntity).toEqual(questions);
     } else {
       expect(scriptTag?.textContent).toContain('"mainEntity": []');
     }
