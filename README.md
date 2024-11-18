@@ -52,14 +52,18 @@ You can easily integrate any of these schema types into your React components by
 There are more to come!
 
 ## Usage
-Each component in react-schema-markup accepts props that are used to populate the structured data in JSON-LD format. Below is an example of `RichBreadCrumbs`. For more examples and usages please see the tests folder.
+Each component in react-schema-markup accepts props that are used to populate the structured data in JSON-LD format.
+
+Below is an example of `RichBreadCrumbs`.
+
+For more examples and usages please see the tests folder.
 
 ### SSR
 Each component takes a Wrapper component ```ScriptWrap``` this is to allow to pass in custom scrip tags:
 
 ```tsx
 import Script from 'next/script'
-import RichBreadCrumbs from 'react-schema-markup/dist/RichBreadCrumbs'
+import { RichBreadCrumbs } from 'react-schema-markup'
 ...
 
 <RichBreadCrumbs ScriptWrap={Script} />
@@ -69,7 +73,7 @@ import RichBreadCrumbs from 'react-schema-markup/dist/RichBreadCrumbs'
 
 The Breadcrumbs component generates structured breadcrumb data for a website.
 ```tsx
-import RichBreadCrumbs from 'react-schema-markup/dist/RichBreadCrumbs'
+import { RichBreadCrumbs } from 'react-schema-markup'
 ...
 
 <RichBreadCrumbs/>
