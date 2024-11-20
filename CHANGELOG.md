@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.3...v1.2.4) (2024-11-20)
+
+
+### Bug Fixes
+
+* remove id ([#38](https://github.com/jamaybyrone/react-schema-markup/issues/38)) ([68217b4](https://github.com/jamaybyrone/react-schema-markup/commit/68217b4d2cd24c79fc88af297e84fef4ec323ac4))
+
 ## [1.2.3](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.2...v1.2.3) (2024-11-20)
 
 
