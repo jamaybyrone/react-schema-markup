@@ -12,9 +12,11 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
     description,
     performer,
     organizer,
+    image,
   } = event;
 
   const Wrapper = ScriptWrap ?? "script";
+
   const jsonLd: WithContext<Event> = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -32,6 +34,7 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
       "@type": "Person",
       name: performer.name,
     },
+    image,
     organizer: organizer && {
       "@type": "Organization",
       name: organizer.name,
@@ -40,9 +43,9 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
   };
 
   return (
-    <Wrapper id="EventStructure" type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
+      <Wrapper id="EventStructure" type="application/ld+json">
+        {JSON.stringify(jsonLd, null, 2)}
+      </Wrapper>
   );
 };
 
