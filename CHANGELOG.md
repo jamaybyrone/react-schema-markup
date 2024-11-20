@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.2...v1.2.3) (2024-11-20)
+
+
+### Bug Fixes
+
+* added in missing image for events ([#37](https://github.com/jamaybyrone/react-schema-markup/issues/37)) ([0480323](https://github.com/jamaybyrone/react-schema-markup/commit/04803238e0e38d35521a9b98aa125dfa963283df))
+
 ## [1.2.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.2.1...v1.2.2) (2024-11-08)
 
 
