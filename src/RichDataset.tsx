@@ -34,7 +34,7 @@ const RichDataset: FC<RichDatasetProps> = ({ dataset, ScriptWrap }) => {
   };
 
   return (
-    <Wrapper id="DatasetStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );

@@ -43,9 +43,9 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
   };
 
   return (
-      <Wrapper id="EventStructure" type="application/ld+json">
-        {JSON.stringify(jsonLd, null, 2)}
-      </Wrapper>
+    <Wrapper type="application/ld+json">
+      {JSON.stringify(jsonLd, null, 2)}
+    </Wrapper>
   );
 };
 

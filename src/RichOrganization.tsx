@@ -37,7 +37,7 @@ const RichOrganization: FC<RichOrganizationProps> = ({
   };
 
   return (
-    <Wrapper id="OrgStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );

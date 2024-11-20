@@ -46,7 +46,7 @@ const RichProduct: FC<RichProductProps> = ({ product, ScriptWrap }) => {
   const Wrapper = ScriptWrap ?? "script";
 
   return (
-    <Wrapper id="ProductStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );
