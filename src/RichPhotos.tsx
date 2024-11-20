@@ -31,7 +31,7 @@ const RichPhotos: FC<RichPhotoProps> = ({ photo, ScriptWrap }) => {
   };
 
   return (
-    <Wrapper id="ImageObjectStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );

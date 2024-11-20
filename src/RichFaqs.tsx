@@ -19,7 +19,7 @@ const RichFaqs: FC<FaqProps> = ({ faqs, ScriptWrap }) => {
   } as WithContext<FAQPage>;
 
   return (
-    <Wrapper id="FAQStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );

@@ -20,7 +20,6 @@ export interface RichEventType {
   image?: string[];
 }
 
-
 export interface RichEventProps {
   event: RichEventType;
   ScriptWrap?: ElementType;

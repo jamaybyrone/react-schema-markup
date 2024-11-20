@@ -55,7 +55,7 @@ const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   };
 
   return (
-    <Wrapper id="BreadCrumbStructure" type="application/ld+json">
+    <Wrapper type="application/ld+json">
       {JSON.stringify(jsonLd, null, 2)}
     </Wrapper>
   );
