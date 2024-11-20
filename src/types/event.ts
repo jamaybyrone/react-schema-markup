@@ -17,7 +17,9 @@ export interface RichEventType {
     name: string;
     url: string;
   };
+  image?: string[];
 }
+
 
 export interface RichEventProps {
   event: RichEventType;
