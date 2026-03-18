@@ -7,19 +7,10 @@ import RichBreadCrumbs from "../src/RichBreadCrumbs";
 import { RichBreadCrumbDataProps } from "../src/types/breadcrumb";
 
 const setup = (props: RichBreadCrumbDataProps, locationOverride: string) => {
-  const mockLocation = {
-    href: locationOverride,
-    origin: new URL(locationOverride).origin,
-    pathname: new URL(locationOverride).pathname,
-  };
-
-  jest
-    .spyOn(window, "location", "get")
-    .mockImplementation(() => mockLocation as unknown as any);
+  window.history.pushState({}, "", locationOverride);
 
   return render(<RichBreadCrumbs {...props} />);
 };
-
 const testCases = [
   {
     scenario: "renders breadcrumb correctly without trailing slash",
