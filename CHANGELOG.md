@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.3.1...v1.3.2) (2026-03-18)
+
+
+### Bug Fixes
+
+* release ([#41](https://github.com/jamaybyrone/react-schema-markup/issues/41)) ([a3a04a4](https://github.com/jamaybyrone/react-schema-markup/commit/a3a04a46dbfe0cb5ee037e40572368c118fab9d2))
+
 ## [1.3.1](https://github.com/jamaybyrone/react-schema-markup/compare/v1.3.0...v1.3.1) (2026-03-18)
 
 
