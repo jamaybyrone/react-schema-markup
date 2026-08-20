@@ -1,7 +1,25 @@
+export { default as RichArticle } from "./RichArticle";
 export { default as RichBreadCrumbs } from "./RichBreadCrumbs";
+export { default as RichClaimReview } from "./RichClaimReview";
+export { default as RichCourse } from "./RichCourse";
 export { default as RichDataset } from "./RichDataset";
+export { default as RichDiscussionForumPosting } from "./RichDiscussionForumPosting";
 export { default as RichEvent } from "./RichEvent";
 export { default as RichFaqs } from "./RichFaqs";
+export { default as RichJobPosting } from "./RichJobPosting";
+export { default as RichLearningResource } from "./RichLearningResource";
+export { default as RichLocalBusiness } from "./RichLocalBusiness";
+export { default as RichMovie } from "./RichMovie";
 export { default as RichOrganization } from "./RichOrganization";
 export { default as RichPhotos } from "./RichPhotos";
 export { default as RichProduct } from "./RichProduct";
+export { default as RichProfilePage } from "./RichProfilePage";
+export { default as RichRecipe } from "./RichRecipe";
+export { default as RichReview } from "./RichReview";
+export { default as RichSoftwareApplication } from "./RichSoftwareApplication";
+export { default as RichSpeakable } from "./RichSpeakable";
+export { default as RichVehicle } from "./RichVehicle";
+export { default as RichVideo } from "./RichVideo";
+export { default as RichWebSite } from "./RichWebSite";
+
+export * from "./types";

@@ -1,6 +1,7 @@
 import { Product, Offer, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichProductProps } from "@/types/product";
+import JsonLd from "./JsonLd";
 
 const RichProduct: FC<RichProductProps> = ({ product, ScriptWrap }) => {
   const {
@@ -43,13 +44,8 @@ const RichProduct: FC<RichProductProps> = ({ product, ScriptWrap }) => {
     image,
     url,
   };
-  const Wrapper = ScriptWrap ?? "script";
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichProduct;

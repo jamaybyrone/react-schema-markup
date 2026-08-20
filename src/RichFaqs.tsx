@@ -1,9 +1,9 @@
 import { FAQPage, WithContext } from "schema-dts";
 import { FaqProps } from "@/types/faqs";
 import React, { FC } from "react";
+import JsonLd from "./JsonLd";
 
 const RichFaqs: FC<FaqProps> = ({ faqs, ScriptWrap }) => {
-  const Wrapper = ScriptWrap ?? "script";
   const formattedQuestions = faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
@@ -18,11 +18,7 @@ const RichFaqs: FC<FaqProps> = ({ faqs, ScriptWrap }) => {
     mainEntity: formattedQuestions,
   } as WithContext<FAQPage>;
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichFaqs;

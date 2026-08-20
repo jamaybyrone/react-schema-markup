@@ -3,6 +3,7 @@
 import { WithContext, BreadcrumbList, ListItem } from "schema-dts";
 import React, { FC } from "react";
 import { BreadcrumbItem, RichBreadCrumbDataProps } from "@/types/breadcrumb";
+import JsonLd from "./JsonLd";
 
 const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   supportedLocales = ["en", "fr", "es", "de"],
@@ -12,8 +13,6 @@ const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   if (typeof window === "undefined") {
     return null;
   }
-
-  const Wrapper = ScriptWrap ?? "script";
 
   const { origin, pathname } = window.location;
   const pathSegments = pathname
@@ -44,21 +43,15 @@ const RichBreadCrumbs: FC<RichBreadCrumbDataProps> = ({
   const jsonLd: WithContext<BreadcrumbList> = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: breadcrumbs.map(
-      (item, index): ListItem => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: item.name,
-        item: item.url,
-      })
-    ),
+    itemListElement: breadcrumbs.map((item, index): ListItem => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichBreadCrumbs;

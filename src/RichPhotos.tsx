@@ -3,6 +3,7 @@
 import { ImageObject, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichPhotoProps } from "@/types/photos";
+import JsonLd from "./JsonLd";
 
 const RichPhotos: FC<RichPhotoProps> = ({ photo, ScriptWrap }) => {
   const {
@@ -13,7 +14,6 @@ const RichPhotos: FC<RichPhotoProps> = ({ photo, ScriptWrap }) => {
     copyrightNotice,
     creatorName,
   } = photo;
-  const Wrapper = ScriptWrap ?? "script";
   const domain = typeof window !== "undefined" ? window.location.origin : "";
 
   const jsonLd: WithContext<ImageObject> = {
@@ -30,11 +30,7 @@ const RichPhotos: FC<RichPhotoProps> = ({ photo, ScriptWrap }) => {
     },
   };
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichPhotos;

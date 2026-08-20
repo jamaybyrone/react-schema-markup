@@ -1,12 +1,12 @@
 import { Organization as Org, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichOrganizationProps } from "@/types/organization";
+import JsonLd from "./JsonLd";
 
 const RichOrganization: FC<RichOrganizationProps> = ({
   organization,
   ScriptWrap,
 }) => {
-  const Wrapper = ScriptWrap ?? "script";
   const {
     name,
     alternateName,
@@ -36,11 +36,7 @@ const RichOrganization: FC<RichOrganizationProps> = ({
     sameAs,
   };
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichOrganization;

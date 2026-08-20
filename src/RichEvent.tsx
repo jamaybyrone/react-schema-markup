@@ -1,6 +1,7 @@
 import { Event, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichEventProps } from "@/types/event";
+import JsonLd from "./JsonLd";
 
 const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
   const {
@@ -14,8 +15,6 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
     organizer,
     image,
   } = event;
-
-  const Wrapper = ScriptWrap ?? "script";
 
   const jsonLd: WithContext<Event> = {
     "@context": "https://schema.org",
@@ -42,11 +41,7 @@ const RichEvent: FC<RichEventProps> = ({ event, ScriptWrap }) => {
     },
   };
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichEvent;
