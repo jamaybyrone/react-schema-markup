@@ -1,9 +1,9 @@
 import { Dataset, WithContext } from "schema-dts";
 import React, { FC } from "react";
 import { RichDatasetProps } from "@/types/dataset";
+import JsonLd from "./JsonLd";
 
 const RichDataset: FC<RichDatasetProps> = ({ dataset, ScriptWrap }) => {
-  const Wrapper = ScriptWrap ?? "script";
   const {
     name,
     description,
@@ -33,11 +33,7 @@ const RichDataset: FC<RichDatasetProps> = ({ dataset, ScriptWrap }) => {
     spatialCoverage,
   };
 
-  return (
-    <Wrapper type="application/ld+json">
-      {JSON.stringify(jsonLd, null, 2)}
-    </Wrapper>
-  );
+  return <JsonLd data={jsonLd} ScriptWrap={ScriptWrap} />;
 };
 
 export default RichDataset;
