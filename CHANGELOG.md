@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jamaybyrone/react-schema-markup/compare/v1.3.2...v1.4.0) (2026-08-22)
+
+
+### Features
+
+* add 16 new schema.org components and modernize toolchain ([#42](https://github.com/jamaybyrone/react-schema-markup/issues/42)) ([6cbbfa9](https://github.com/jamaybyrone/react-schema-markup/commit/6cbbfa95450eb76673b14892026283eb36dcc821))
+
 ## [1.3.2](https://github.com/jamaybyrone/react-schema-markup/compare/v1.3.1...v1.3.2) (2026-03-18)
 
 
